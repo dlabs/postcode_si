@@ -1,0 +1,7 @@
+source :rubygems
+
+gem 'oj'
+gem 'nokogiri'
+gem 'pry'
+
+
