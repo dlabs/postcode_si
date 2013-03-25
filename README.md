@@ -1,6 +1,6 @@
 ## postcode_si
 
-This is PHP and Ruby library for Slovenian postcodes w/ coordinates.
+This is high performance postcode geo-coding server written in JavaScript (for Node).
 
 ## Authors
 - [Oto Brglez](https://github.com/otobrglez)

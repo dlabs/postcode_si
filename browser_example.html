@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html><head>
+
+  <meta charset="utf-8">
+  <title>postcode_si - Pošte okoli točke</title>
+  <script type="text/javascript" src="./postcode_si.js"></script>
+
+  <script type="text/javascript">
+
+  /* This code will calculate codes using postcode_si lib. */
+  var show_codes_around = function(some_point){
+
+    /* Retriving points near point */
+    var points_near = postcode_si.near(some_point)
+
+    for(var p=0; p<points_near.length; p++){
+
+      var point_wrap = document.createElement('li')
+      var text = document.createTextNode(
+        points_near[p].postcode+ " "+
+        points_near[p].town+ " / "+
+        points_near[p].distance_from_origin+"m "+
+        points_near[p].org)
+      point_wrap.appendChild(text)
+
+      document.getElementById("postcode_near").appendChild(point_wrap)
+    }
+  }
+
+  window.onload = function(){
+
+    /* Just some point */
+    var some_point = [46.11132565729796, 14.508132934570312]
+    show_codes_around(some_point);
+
+  }
+  </script>
+
+  <style type="text/css">
+    html, body { font-family: helvetica, sans-serif; font-size: 100%; }
+    div.wrap{ max-width:600px; margin:0 auto; }
+    ul, ul li{ padding:0px; margin:0px; list-style: none }
+  </style>
+</head>
+<body><div class="wrap">
+  <header><h1>postcode_si</h1> <p>Pošte okoli točke (brez strežnika)</p></header>
+
+  <ul id="postcode_near"></ul>
+
+</div></body>
+</html>
