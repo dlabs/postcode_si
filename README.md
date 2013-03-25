@@ -25,7 +25,7 @@ This project provides high performance JavaScript geo-coding library and server 
     console.log(points_near_location[0].town)
     // Ljubljana - Šmartno
     
-## Using REST API
+## using REST API
 
 Sample server is running on [Heroku](http://postcode-si.herokuapp.com). You can try it out using simple curl command...
 
@@ -49,7 +49,10 @@ Sample server is running on [Heroku](http://postcode-si.herokuapp.com). You can 
         "distance_from_origin": 3799.3479104102053
       },
       ...
-      
+
+### running server
+
+To run the server you have to install all dependent packages (```npm install```). Since the server is written in CoffeeScript you have to run ```coffee server.coffee```. For developement you can user supervisor and run it with ```supervisor server.coffee```.
     
 ## Authors
 - [Oto Brglez](https://github.com/otobrglez)
